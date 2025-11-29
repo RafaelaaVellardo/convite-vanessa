@@ -51,7 +51,7 @@ body {
 @media (max-width: 900px) {
 
     .info1 img {
-        width: 70%;   /* maior no celular */
+        width: 70%; 
     }
 
     .info2 {
@@ -73,7 +73,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 120%;
     transition: 0.3s;
 }
 
