@@ -6,7 +6,6 @@ body {
     background-image: url("teste.gif");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     overflow-x: hidden;
     display: flex;
     justify-content: center;
@@ -15,16 +14,25 @@ body {
 }
 
 .fundo-brilho {
-    background-image: url("tela-inicial.png");
     width: 100%;
     height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0.4;
-    z-index: 0; 
+    z-index: -1; 
 }
 
+@media (max-width: 900px) {
+
+    html,
+    body {
+        overflow-x: hidden !important;
+    }
+    .fundo-brilho {
+        opacity: 0.2;
+    }
+}
 .titulo-container {
     position: absolute;
     top: 1%;
@@ -44,7 +52,7 @@ body {
 }
 
 .img-convite {
-    width: 70%;
+    width: 60%;
     height: auto;
     z-index: 21 ;
 }
@@ -64,12 +72,24 @@ body {
 }
 
 .minha-foto {
-    bottom: 25%;
-    right: 5%;
     z-index: 15;
+    position: relative;
 }
 
 .img-foto {
-    max-width: 1000px;
+    position: relative;
+    max-width: 1100px;
     height: auto;
+    margin-top: 470px;
+    
+}
+/* MOBILE */
+@media (max-width: 900px) {
+    .img-foto{
+        width: 500px;
+        left: 3%;
+        height: auto;
+        z-index: 21 ;
+        margin-top: 65px;
+    }
 }
