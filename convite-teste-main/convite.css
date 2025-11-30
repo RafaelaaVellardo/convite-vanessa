@@ -1,129 +1,127 @@
+html,
 body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-image: url("teste.gif");
+    background-position: center;
+    position: relative;
     margin: 0;
     padding: 0;
+}
+
+.fullscreen-flor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("tela-inicial.png"); /* aqui a imagem da flor */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.3; /* ajuste a opacidade conforme necessário */
+  z-index: -2; /* menor que z de todo o resto, para ficar atrás */
+}
+
+.center-wrapper,
+.center-wrapper2,
+.center-wrapper3,
+.center-wrapper4 {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 100vh;
-    background-image: url("teste.gif");
 }
 
 .fundo-brilho {
-    width: 100%;
-    height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0.4;
-    z-index: -1;
-}
-
-@media (max-width: 900px) {
-
-    html,
-    body {
-        overflow-x: hidden !important;
-    }
-
-    .fundo-brilho {
-        opacity: 0.2;
-    }
-}
-
-.titulo-container {
-    top: 1%;
-    left: 2%;
-    z-index: 10;
-}
-
-@media (max-width: 900px) {
-
-    html,
-    body {
-        overflow-x: hidden !important;
-    }
-
-    .fundo-brilho {
-        opacity: 0.2;
-    }
-}
-
-.img-convite {
-    width: 60%;
-    height: auto;
-    z-index: 21;
-}
-
-/* =================== MOBILE ==================== */
-@media (max-width: 900px) {
-    .img-convite {
-        width: 100%;
-        height: auto;
-        z-index: 21;
-    }
-}
-
-.linha-imagens {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-.minha-foto {
-    z-index: 15;
-    position: relative;
-}
-
-.teste-calendario,
-.teste-local {
-    display: inline-block;
-    position: relative;
-}
-
-.img-calendario{
-    margin-top: 50px;
-}
-
-.img-foto {
-    position: relative;
     width: 100%;
-    height: auto;
-    justify-content: center;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.titulo-foto {
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-/* MOBILE */
-@media (max-width: 900px) {
-    .img-foto {
-        width: 500px;
-        left: 3%;
-        height: auto;
-        z-index: 21;
-    }
-}
-
-.img-local,
-.img-calendario,
-.img-bokas,
-.img-momento {
-    width: 800px;
+/* ajusta as imagens conforme antes */
+.foto-titulo {
+    width: 700px;
+    max-width: 90%;
     height: auto;
-    margin-right: -150px;
-    margin-left: -100px;
+    object-fit: cover;
+    margin: 0;
 }
 
-@media (max-width: 900px) {
-    .img-local {
-        margin-top: 50px;
-        width: 500px;
-        left: 3%;
-        height: auto;
-        z-index: 21;
-    }
-
-     .img-calendario{
-        width: 400px;
-        left: 3%;
-        height: auto;
-        z-index: 21;
-     }
+.foto-linha {
+    width: 1000px;
+    max-width: 90%;
+    height: auto;
+    object-fit: cover;
+    margin-top: -12%;
 }
 
+.local-calendario {
+    margin-left: 12%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+}
+
+.foto-calendario {
+    width: 1200px;
+    max-width: 90%;
+    height: auto;
+    object-fit: cover;
+    margin: 0;
+}
+
+.foto-local {
+    width: 900px;
+    max-width: 90%;
+    height: auto;
+    object-fit: cover;
+    margin: 0;
+}
+
+.bokas-momento {
+    margin-left: 12%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+}
+
+.foto-bokas {
+    width: 3000px;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 0;
+}
+
+.foto-momento {
+    width: 3000px;
+    max-width: 90%;
+    height: auto;
+    object-fit: cover;
+    margin: 0;
+}
+
+.foto-logo {
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
